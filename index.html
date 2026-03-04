@@ -5,15 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ioar Casado Telletxea</title>
   <meta name="description" content="Ioar Casado Telletxea — PhD student in Machine Learning at BCAM." />
-
-  <link rel="stylesheet" href="css/main.css" />
-
-  <!-- Optional: nicer rendering on some browsers -->
   <meta name="color-scheme" content="light dark" />
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body>
-
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
@@ -23,43 +19,52 @@
         </div>
       </div>
 
-
+      <!-- Optional nav (remove if you don't want it) -->
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-link" href="index.html" aria-current="page">Home</a>
+        <a class="nav-link" href="research/index.html">Research</a>
+        <a class="nav-link" href="cv/index.html">CV</a>
+      </nav>
+    </div>
   </header>
 
+  <main id="content" class="container">
+    <section class="card hero">
+      <div class="hero-text">
+        <h2>About me</h2>
+        <p>
+          Currently I am a PhD student in machine learning at the
+          <a href="https://bcamath.org" target="_blank" rel="noopener noreferrer">
+            Basque Center for Applied Mathematics (BCAM)
+          </a>
+          in Bilbao, Basque Country (Spain). I am happy to announce that starting next semester I will be
+          a Research Associate (postdoc) at the
+          <a href="https://www.ai-fun.manchester.ac.uk/" target="_blank" rel="noopener noreferrer">
+            Manchester Centre for AI Fundamentals
+          </a>
+          at the University of Manchester.
+        </p>
+        <p>
+          My research interests lie at the intersection of machine learning and mathematics,
+          with a focus on learning theory, generalization bounds, and Bayesian methods.
+        </p>
+      </div>
 
+      <div class="hero-media">
+        <img
+          class="profile-pic"
+          src="icasado.jpg"
+          alt="Portrait of Ioar Casado Telletxea"
+          loading="lazy"
+          decoding="async"
+          onerror="this.src='assets/profile-placeholder.png'; this.onerror=null;"
+        />
+      </div>
+    </section>
 
-<section class="card hero">
-  <div class="hero-text">
-    <h2>About me</h2>
-    <p>
-      I’m a PhD student in machine learning at the
-      <a href="https://bcamath.org" target="_blank" rel="noopener noreferrer">
-        Basque Center for Applied Mathematics (BCAM)
-      </a>
-      in Bilbao (Spain).
-    </p>
-    <p>
-      My research interests lie at the intersection of machine learning and mathematics,
-      with a focus on learning theory, generalization bounds, and Bayesian methods.
-    </p>
-  </div>
-
-  <div class="hero-media">
-    <img
-      class="profile-pic"
-      src="icasado.jpg"
-      alt="Portrait of Ioar Casado Telletxea"
-      loading="lazy"
-      decoding="async"
-      onerror="this.src='assets/profile-placeholder.png'; this.onerror=null;"
-    />
-  </div>
-</section>
     <div class="grid">
-      <!-- CONTACT -->
       <section class="card">
         <h2>Contact & Links</h2>
-
         <ul class="link-list">
           <li>
             <span class="label">Email</span>
@@ -84,13 +89,11 @@
         </ul>
       </section>
 
-      <!-- NEWS -->
       <section class="card">
         <div class="card-header">
           <h2>News</h2>
           <a class="small-link" href="research/index.html">More →</a>
         </div>
-
         <ul class="news">
           <li><span class="date">[Month Year]</span> Short news item about a paper, talk, visit, or award.</li>
           <li><span class="date">[Month Year]</span> Another relevant update.</li>
@@ -106,7 +109,6 @@
   </footer>
 
   <script>
-    // tiny convenience: keep footer year current
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
