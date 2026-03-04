@@ -1,64 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ioar Casado Telletxea</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/main.css">
+  <meta name="description" content="Ioar Casado Telletxea — PhD student in Machine Learning at BCAM." />
+
+  <link rel="stylesheet" href="css/main.css" />
+
+  <!-- Optional: nicer rendering on some browsers -->
+  <meta name="color-scheme" content="light dark" />
 </head>
+
 <body>
-  <header>
-    <h1>Ioar Casado Telletxea</h1>
-    <nav>
-      <a href="index.html">home</a> /
-      <a href="research/index.html">research</a> /
-      <a href="cv/index.html">cv</a>
-    </nav>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-title">
+          <h1>Ioar Casado Telletxea</h1>
+          <p class="tagline">PhD student · Machine Learning · BCAM (Bilbao)</p>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-link" href="index.html" aria-current="page">Home</a>
+        <a class="nav-link" href="research/index.html">Research</a>
+        <a class="nav-link" href="cv/index.html">CV</a>
+      </nav>
+    </div>
   </header>
 
-  <hr>
+  <main id="content" class="container">
+    <!-- HERO -->
+    <section class="card hero">
+      <div class="hero-media">
+        <!-- Put your photo at: assets/profile.jpg -->
+        <img
+          class="profile-pic"
+          src="assets/profile.jpg"
+          alt="Portrait of Ioar Casado Telletxea"
+          loading="lazy"
+          decoding="async"
+          onerror="this.src='assets/profile-placeholder.png'; this.onerror=null;"
+        />
+        <p class="photo-hint">
+          Replace <code>assets/profile.jpg</code> with your photo (recommended: square, ≥ 600×600).
+        </p>
+      </div>
 
-  <main>
-    <section>
-      <h2>Welcome!</h2>
-      <p>
-        I’m a PhD student in Machine Learning at the
-        <a href="https://bcamath.org" target="_blank" rel="noopener noreferrer">
-          Basque Center for Applied Mathematics (BCAM)
-        </a>
-        in Bilbao (Spain).
-      </p>
-      <p>
-        My research interests lie in the intersection of <em>machine learning</em> and <em>applied mathematics</em>.
-        I’m particularly interested in Bayesian methods, PAC-Bayes bounds.
-      </p>
+      <div class="hero-text">
+        <h2>Welcome</h2>
+        <p>
+          I’m a PhD student in Machine Learning at the
+          <a href="https://bcamath.org" target="_blank" rel="noopener noreferrer">
+            Basque Center for Applied Mathematics (BCAM)
+          </a>
+          in Bilbao (Spain).
+        </p>
+        <p>
+          My research interests lie at the intersection of <em>machine learning</em> and <em>mathematics</em>,
+          with a focus on learning theory, generalization bounds, and Bayesian methods.
+        </p>
+      </div>
     </section>
 
-    <section>
-      <h2>Contact & Links</h2>
-      <p>
-        Email: <a href="mailto:icasado@bcamath.org">icasado@bcamath.org</a><br>
-        GitHub: <a href="https://github.com/icasado-telletxea" target="_blank" rel="noopener noreferrer">
-          github.com/icasado-telletxea
-        </a><br>
-        Google Scholar: <a href="https://scholar.google.com/citations?user=NBTdoV8AAAAJ&hl=en">Profile</a><br> -->
-        CV: <a href="cv/your_cv.pdf">Download (PDF)</a>
-      </p>
-    </section>
+    <div class="grid">
+      <!-- CONTACT -->
+      <section class="card">
+        <h2>Contact & Links</h2>
 
-    <section>
-      <h2>News</h2>
-      <ul>
-        <li>[Month Year] Short news item about a paper, talk, visit, or award.</li>
-        <li>[Month Year] Another relevant update.</li>
-      </ul>
-    </section>
+        <ul class="link-list">
+          <li>
+            <span class="label">Email</span>
+            <a href="mailto:icasado@bcamath.org">icasado@bcamath.org</a>
+          </li>
+          <li>
+            <span class="label">GitHub</span>
+            <a href="https://github.com/icasado-telletxea" target="_blank" rel="noopener noreferrer">
+              github.com/icasado-telletxea
+            </a>
+          </li>
+          <li>
+            <span class="label">Scholar</span>
+            <a href="https://scholar.google.com/citations?user=NBTdoV8AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+              Google Scholar profile
+            </a>
+          </li>
+          <li>
+            <span class="label">CV</span>
+            <a href="cv/your_cv.pdf">Download (PDF)</a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- NEWS -->
+      <section class="card">
+        <div class="card-header">
+          <h2>News</h2>
+          <a class="small-link" href="research/index.html">More →</a>
+        </div>
+
+        <ul class="news">
+          <li><span class="date">[Month Year]</span> Short news item about a paper, talk, visit, or award.</li>
+          <li><span class="date">[Month Year]</span> Another relevant update.</li>
+        </ul>
+      </section>
+    </div>
   </main>
 
-  <hr>
-
-  <footer>
-    <p>&copy; 2025 Ioar Casado Tellechea.</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Ioar Casado Telletxea.</p>
+    </div>
   </footer>
+
+  <script>
+    // tiny convenience: keep footer year current
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
