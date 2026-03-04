@@ -217,3 +217,38 @@ footer {
     height: 130px;
   }
 }
+
+/* Better hero alignment: text + photo line up cleanly */
+.hero{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px; /* text | photo */
+  gap: 1.4rem;
+  align-items: center;
+}
+
+/* remove the default top spacing mismatch */
+.hero-text h2{
+  margin-top: 0;
+}
+
+/* align the image box with the heading baseline */
+.hero-media{
+  justify-self: end;
+  align-self: start;
+  padding-top: 0.15rem; /* tweak 0.0–0.3rem to taste */
+}
+
+.profile-pic{
+  display: block;         /* IMPORTANT: removes the inline-image baseline gap */
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/* Mobile: stack */
+@media (max-width: 700px){
+  .hero{ grid-template-columns: 1fr; }
+  .hero-media{ justify-self: start; padding-top: 0; }
+  .profile-pic{ width: 130px; height: 130px; }
+}
