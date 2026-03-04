@@ -26,13 +26,9 @@
 /* ---------- Base ---------- */
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
-}
+*::after { box-sizing: border-box; }
 
-html {
-  -webkit-text-size-adjust: 100%;
-}
+html { -webkit-text-size-adjust: 100%; }
 
 body {
   max-width: 860px;
@@ -53,10 +49,7 @@ a {
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
 }
-
-a:hover {
-  color: var(--link-hover);
-}
+a:hover { color: var(--link-hover); }
 
 a:focus-visible {
   outline: 3px solid color-mix(in srgb, var(--link) 60%, transparent);
@@ -101,7 +94,6 @@ nav a {
 nav a:hover {
   border-color: var(--border);
   background: color-mix(in srgb, var(--card) 85%, transparent);
-  text-decoration: none; /* override old hover underline */
 }
 
 /* ---------- Separator ---------- */
@@ -138,10 +130,7 @@ ul {
   padding-left: 1.1rem;
   margin: 0.6rem 0 0;
 }
-
-li {
-  margin: 0.35rem 0;
-}
+li { margin: 0.35rem 0; }
 
 /* ---------- Footer ---------- */
 footer {
@@ -151,104 +140,55 @@ footer {
   text-align: center;
 }
 
-/* ---------- Optional profile picture block ---------- */
-.intro {
+/* ---------- HERO (About + photo) ---------- */
+/* Goal: photo vertically centered with text block */
+.hero {
   display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 1rem;
-  align-items: start;
+  grid-template-columns: minmax(0, 1fr) 210px; /* text | photo */
+  gap: 1.4rem;
+  align-items: center; /* <-- centers photo w.r.t. text block */
+}
+
+.hero-text { min-width: 0; }
+.hero-text h2 { margin-top: 0; }
+
+.hero-media {
+  justify-self: end;
+  display: flex;
+  align-items: center;   /* vertically centers the image within its column */
+  justify-content: center;
 }
 
 .profile-pic {
-  width: 140px;
-  height: 140px;
+  display: block;        /* remove baseline gap */
+  width: 210px;
+  height: 210px;
   border-radius: 18px;
   object-fit: cover;
   border: 1px solid var(--border);
   background: color-mix(in srgb, var(--card) 85%, transparent);
 }
 
-@media (max-width: 620px) {
-  body {
-    margin: 1.2rem auto;
-  }
-  header {
-    padding: 0.9rem 0.9rem;
-  }
-  .intro {
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+  body { margin: 1.2rem auto; }
+
+  header { padding: 0.9rem; }
+
+  /* Stack and center the image */
+  .hero {
     grid-template-columns: 1fr;
+    align-items: start;
   }
+
+  .hero-media {
+    order: -1;            /* image above text (delete if you want image below) */
+    justify-self: center; /* center horizontally */
+    margin-bottom: 0.6rem;
+  }
+
   .profile-pic {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
   }
-}
-
-/* HERO: text left, photo right */
-.hero{
-  display: grid;
-  grid-template-columns: 1fr 170px; /* left text, right photo */
-  gap: 1.25rem;
-  align-items: start;
-}
-
-.hero-media{
-  justify-self: end; /* push photo to the right edge */
-}
-
-.profile-pic{
-  width: 170px;
-  height: 170px;
-  border-radius: 18px;
-  object-fit: cover;
-  border: 1px solid var(--border);
-}
-
-/* Mobile: stack */
-@media (max-width: 700px){
-  .hero{
-    grid-template-columns: 1fr;
-  }
-  .hero-media{
-    justify-self: start;
-  }
-  .profile-pic{
-    width: 130px;
-    height: 130px;
-  }
-}
-
-/* Better hero alignment: text + photo line up cleanly */
-.hero{
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 200px; /* text | photo */
-  gap: 1.4rem;
-  align-items: center;
-}
-
-/* remove the default top spacing mismatch */
-.hero-text h2{
-  margin-top: 0;
-}
-
-/* align the image box with the heading baseline */
-.hero-media{
-  justify-self: end;
-  align-self: start;
-  padding-top: 0.15rem; /* tweak 0.0–0.3rem to taste */
-}
-
-.profile-pic{
-  display: block;         /* IMPORTANT: removes the inline-image baseline gap */
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 18px;
-}
-
-/* Mobile: stack */
-@media (max-width: 700px){
-  .hero{ grid-template-columns: 1fr; }
-  .hero-media{ justify-self: start; padding-top: 0; }
-  .profile-pic{ width: 130px; height: 130px; }
 }
