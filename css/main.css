@@ -1,26 +1,14 @@
 /* ---------- Theme ---------- */
 :root {
-  --bg: #ffffff;
-  --text: #111827;
-  --muted: #6b7280;
-  --border: rgba(17, 24, 39, 0.12);
-  --card: rgba(255, 255, 255, 0.92);
-  --shadow: 0 10px 28px rgba(17, 24, 39, 0.08);
-  --link: #1d4ed8;
-  --link-hover: #1e40af;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0b1220;
-    --text: #e5e7eb;
-    --muted: #9ca3af;
-    --border: rgba(255, 255, 255, 0.14);
-    --card: rgba(255, 255, 255, 0.04);
-    --shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
-    --link: #93c5fd;
-    --link-hover: #bfdbfe;
-  }
+  color-scheme: dark;
+  --bg: #0b1220;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --border: rgba(255, 255, 255, 0.14);
+  --card: #141d2d;
+  --shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+  --link: #93c5fd;
+  --link-hover: #bfdbfe;
 }
 
 /* ---------- Base ---------- */
@@ -192,3 +180,43 @@ footer {
     height: 140px;
   }
 }
+
+/* ---------- Shared page details ---------- */
+nav a[aria-current="page"] {
+  color: var(--link);
+  background: rgba(147, 197, 253, 0.10);
+  border-color: rgba(147, 197, 253, 0.35);
+}
+
+.tagline { color: var(--muted); }
+h3 { margin: 1.2rem 0 0.4rem; font-size: 1rem; }
+.page-intro { margin: 1.8rem 0 1rem; }
+.page-intro h2 { font-size: 1.5rem; }
+.link-list a { overflow-wrap: anywhere; }
+.publication-title { margin-top: 0; }
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -5rem;
+  padding: 0.6rem 1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  z-index: 1;
+}
+.skip-link:focus { top: 1rem; }
+
+/* ---------- Papers ---------- */
+.paper-list { list-style: none; padding: 0; margin: 0; }
+.paper {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 1.1rem;
+  margin: 1rem 0;
+}
+.paper-year { margin: 0 0 0.5rem; color: var(--link); font-weight: 600; }
+.paper .publication-title { font-size: 1.15rem; line-height: 1.4; }
+.paper-authors { margin-bottom: 0.2rem; }
+.paper-venue { margin-top: 0; color: var(--muted); font-size: 0.92rem; }
+.paper-abstract { margin-top: 1rem; }

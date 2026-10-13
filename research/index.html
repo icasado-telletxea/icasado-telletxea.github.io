@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Papers | Ioar Casado Telletxea</title>
+  <meta name="description" content="Papers by Ioar Casado Telletxea, with abstracts and links, in reverse chronological order." />
+  <meta name="color-scheme" content="dark" />
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-title">
+          <h1>Ioar Casado Telletxea</h1>
+          <p class="tagline">Researcher in statistics and machine learning</p>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link" href="../research/index.html" aria-current="page">Papers</a>
+        <a class="nav-link" href="../other-research-interests/index.html">Other research interests</a>
+      </nav>
+    </div>
+  </header>
+  <main id="content" class="container">
+    <div class="page-intro">
+      <h2>Papers</h2>
+      <p>Publications and preprints, newest first. See also my
+        <a href="https://scholar.google.com/citations?user=47XMQw0AAAAJ&amp;hl=en&amp;sortby=pubdate" target="_blank" rel="noopener noreferrer">Google Scholar profile</a>.</p>
+    </div>
+    <ol class="paper-list" aria-label="Papers, newest first">
+      <li class="card paper">
+        <p class="paper-year">2026</p>
+        <h3 class="publication-title">Error Bounds for a Diffusion Model-Based Drift Estimator</h3>
+        <p class="paper-authors">Ioar Casado-Telletxea, Omar Rivasplata</p>
+        <p class="paper-venue">Preprint · arXiv:2606.02115</p>
+        <p class="paper-links"><a href="https://arxiv.org/abs/2606.02115" target="_blank" rel="noopener noreferrer">arXiv</a> · <a href="https://arxiv.org/pdf/2606.02115" target="_blank" rel="noopener noreferrer">PDF</a></p>
+        <p class="paper-abstract"><strong>Abstract.</strong> Parameter estimation in stochastic differential equations is a classical statistical problem of much importance in many scientific fields. Recent work of Tapia Costa et al. (2026) introduced a novel technique for estimating the drift when the diffusion parameter is known, using discrete samples from multiple trajectories. Their method treats drift estimation as a denoising problem, and leverages tools from (conditional) score-matching diffusion models. Although their experiments showed promising results across different drift classes, the question of theoretical guarantees for their estimator was left unanswered. In this note, we address this gap by exploiting techniques from diffusion model theory. More concretely, we derive an explicit risk bound for the time-averaged mean-squared error of said drift estimator. Our bound decomposes the risk into the (i) Euler-Maruyama discretization, (ii) score/denoiser approximation, (iii) noise initialization, and (iv) sampling variance, revealing the trade-offs between the different hyperparameters and sources of error in the estimator.</p>
+      </li>
+      <li class="card paper">
+        <p class="paper-year">2026</p>
+        <h3 class="publication-title">SPDE Methods for Nonparametric Bayesian Posterior Contraction and Laplace Approximation</h3>
+        <p class="paper-authors">Enric Alberola-Boloix, Ioar Casado-Telletxea</p>
+        <p class="paper-venue">Preprint · arXiv:2603.22468</p>
+        <p class="paper-links"><a href="https://arxiv.org/abs/2603.22468" target="_blank" rel="noopener noreferrer">arXiv</a> · <a href="https://arxiv.org/pdf/2603.22468" target="_blank" rel="noopener noreferrer">PDF</a></p>
+        <p class="paper-abstract"><strong>Abstract.</strong> We derive posterior contraction rates (PCRs) and finite-sample Bernstein von Mises (BvM) results for non-parametric Bayesian models by extending the diffusion-based framework of Mou et al. (2024) to the infinite-dimensional setting. The posterior is represented as the invariant measure of a Langevin stochastic partial differential equation (SPDE) on a separable Hilbert space, which allows us to control posterior moments and obtain non-asymptotic concentration rates in Hilbert norms under various likelihood curvature and regularity conditions. We also establish a quantitative Laplace approximation for the posterior. The theory is illustrated in a nonparametric linear Gaussian inverse problem.</p>
+      </li>
+      <li class="card paper">
+        <p class="paper-year">2024</p>
+        <h3 class="publication-title">PAC-Bayes-Chernoff bounds for unbounded losses</h3>
+        <p class="paper-authors">Ioar Casado, Luis A. Ortega, Aritz Pérez, Andrés R. Masegosa</p>
+        <p class="paper-venue">Advances in Neural Information Processing Systems 37, 24350–24374 (NeurIPS 2024)</p>
+        <p class="paper-links"><a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/2b567c9aa100a8edcd13607a91ed3022-Abstract-Conference.html" target="_blank" rel="noopener noreferrer">Proceedings</a> · <a href="https://arxiv.org/abs/2401.01148" target="_blank" rel="noopener noreferrer">arXiv</a> · <a href="https://arxiv.org/pdf/2401.01148" target="_blank" rel="noopener noreferrer">PDF</a></p>
+        <p class="paper-abstract"><strong>Abstract.</strong> We introduce a new PAC-Bayes oracle bound for unbounded losses that extends Cramér-Chernoff bounds to the PAC-Bayesian setting. The proof technique relies on controlling the tails of certain random variables involving the Cramér transform of the loss. Our approach naturally leverages properties of Cramér-Chernoff bounds, such as exact optimization of the free parameter in many PAC-Bayes bounds. We highlight several applications of the main theorem. Firstly, we show that our bound recovers and generalizes previous results. Additionally, our approach allows working with richer assumptions that result in more informative and potentially tighter bounds. In this direction, we provide a general bound under a new model-dependent assumption from which we obtain bounds based on parameter norms and log-Sobolev inequalities. Notably, many of these bounds can be minimized to obtain distributions beyond the Gibbs posterior and provide novel theoretical coverage to existing regularization techniques.</p>
+      </li>
+      <li class="card paper">
+        <p class="paper-year">2022</p>
+        <h3 class="publication-title">Dirichlet process mixture models for non-stationary data streams</h3>
+        <p class="paper-authors">Ioar Casado, Aritz Pérez</p>
+        <p class="paper-venue">2022 IEEE International Conference on Data Mining (ICDM), 873–878</p>
+        <p class="paper-links"><a href="https://doi.org/10.1109/ICDM54844.2022.00100" target="_blank" rel="noopener noreferrer">Publisher</a> · <a href="https://arxiv.org/abs/2210.06872" target="_blank" rel="noopener noreferrer">arXiv</a> · <a href="https://arxiv.org/pdf/2210.06872" target="_blank" rel="noopener noreferrer">PDF</a></p>
+        <p class="paper-abstract"><strong>Abstract.</strong> In recent years, we have seen a handful of work on inference algorithms over non-stationary data streams. Given their flexibility, Bayesian non-parametric models are a good candidate for these scenarios. However, reliable streaming inference under the concept drift phenomenon is still an open problem for these models. In this work, we propose a variational inference algorithm for Dirichlet process mixture models. Our proposal deals with the concept drift by including an exponential forgetting over the prior global parameters. Our algorithm allows to adapt the learned model to the concept drifts automatically. We perform experiments in both synthetic and real data, showing that the proposed model is competitive with the state-of-the-art algorithms in the density estimation problem, and it outperforms them in the clustering problem.</p>
+      </li>
+      <li class="card paper">
+        <p class="paper-year">2019</p>
+        <h3 class="publication-title">Compactness and Löwenheim-Skolem theorems in extensions of first-order logic</h3>
+        <p class="paper-authors">Ioar Casado Telletxea</p>
+        <p class="paper-venue">BSc thesis · Universitat de Barcelona</p>
+        <p class="paper-links"><a href="https://hdl.handle.net/2445/135558" target="_blank" rel="noopener noreferrer">Repository</a></p>
+        <p class="paper-abstract"><strong>Abstract.</strong> Lindström’s theorem characterizes first-order logic as the most expressive among those that satisfy the countable Compactness and downward Löwenheim-Skolem theorems. Given the importance of this results in model theory, Lindström’s theorem justifies, to some extent, the privileged position of first-order logic in contemporary mathematics. Even though Lindström’s theorem gives a negative answer to the problem of finding a proper extension of first-order logic satisfying the same model-theoretical properties, the study of these extensions has been of great importance during the second half of the XX. century: logicians were trying to find systems that kept a balance between expressive power and rich model-theoretical properties. The goal of this essay is to prove Lindström’s theorem, along with its prerequisites, and to give weaker versions of the Compactness and Löwenheim-Skolem theorems for the logic L(Q₁) (first-order logic with the quantifier &quot;there exist uncountably many&quot;), which we present as an example of extended logic with good model-theoretical properties.</p>
+      </li>
+    </ol>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Ioar Casado Telletxea.</p>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
