@@ -633,3 +633,46 @@ p+p {
     transition:none;
   }
 }
+
+/* Restore the photograph's original colours */
+.profile-pic {
+  filter: none;
+}
+
+/* Align the photograph with the introductory paragraph */
+@media (min-width: 601px) {
+  .hero {
+    row-gap: 0;
+  }
+
+  .hero-text {
+    display: contents;
+  }
+
+  .hero-text > .eyebrow {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .hero-text > h1 {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .hero-text > p:not(.eyebrow) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .hero-actions {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .hero-media {
+    grid-column: 2;
+    grid-row: 3 / 5;
+    align-self: start;
+    margin-top: 0;
+  }
+}
